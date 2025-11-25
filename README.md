@@ -60,6 +60,6 @@ The pipeline can be adapted to include additional species or other genomic featu
 
 Shell script output serves as input for the R analysis.
 
-Figures showing the results are not included in the repository. To generate the plots and statistical results
-,run the Shell script (variation_genome_gc_download.sh) in linux terminal and then the .tsv output
+Figures showing the results are not included in the repository. To generate the plots and statistical results,
+run the Shell script (variation_genome_gc_download.sh) in linux terminal and then the .tsv output
 file in the R script (variation_genome_gc_analysis.R).
