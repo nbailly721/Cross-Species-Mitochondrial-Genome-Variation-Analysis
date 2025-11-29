@@ -1,65 +1,65 @@
                                                                   ######Variation of Genome Length and GC Content Across Species######
--This project investigates mitochondrial genome sequence length and GC content across multiple species by downloading raw genome data, processing it with shell scripting, and analyzing it with R.
 
-##📁 Dataset
+**Description**
 
-Mitochondrial genome FASTA files for human, mouse, cattle, and gorilla, downloaded from NCBI using the shell script.
+This project examines mitochondrial genome length and GC content across multiple species by combining shell-based sequence processing with R-based exploratory analysis and visualization. The workflow downloads raw mitochondrial genomes, computes genome length and GC composition, and compares these metrics across species.
 
-##🔧 Tools & Packages
+**Workflow Overview**
 
-Shell Script:
+     1. Genome Download and Processing (Shell Script)
 
-Tools: wget for downloading sequences, standard Linux commands (grep, awk, tr) for processing.
+Download mitochondrial genome FASTA files from NCBI using wget.
 
-Purpose: Download mitochondrial genome FASTA files, calculate genome size and GC content, output stats table.
+Calculate total genome length and GC content using standard Linux tools (grep, awk, tr).
 
-R Script:
+Output summary statistics for each species to mt_stats.tsv.
 
-Language: R
+     2. Genome Statistics Analysis (R Script)
 
-Packages: tidyverse
+Load genome statistics from mt_stats.tsv.
 
-Purpose: Load the genome statistics, explore the data, and create visualizations comparing genome size and GC content across species.
+Explore variation in genome size and GC content across species.
 
-##📊 Workflow Overview
-Shell Script
+Generate visualizations including bar plots for genome length and GC content and a scatter plot showing their relationship.
 
-Download mitochondrial genome FASTA files for selected species from NCBI.
+**Datasets Used**
 
-Calculate total genome length and GC content percentage for each species.
+Mitochondrial genome FASTA files for:
+Human, Mouse, Cattle, Gorilla
+(Downloaded directly from NCBI via shell script.)
 
-Save results to mt_stats.tsv.
+**Packages / Tools Used**
 
-R Script
+Shell / Command-Line Tools
 
-Load the mt_stats.tsv data.
+wget – Download mitochondrial genome sequences
 
-Perform basic data exploration and summary statistics.
+grep, awk, tr – Process FASTA files and calculate statistics
 
-Generate bar plots for genome length and GC content by species.
+R Environment
 
-Create scatter plot to visualize correlation between genome length and GC content.
+tidyverse – Data manipulation and visualization
 
-##📈 Key Results
+**Key Results**
 
-Quantified differences in mitochondrial genome size and GC content across species.
+Quantified species-specific differences in mitochondrial genome length and GC content.
 
-Visual insights into the relationship between genome length and GC composition.
+Visual comparisons of genome size and GC composition across species.
 
-#3📂 Files
+Scatter plot illustrating the relationship between genome length and GC content.
 
-variation_genome_gc_download.sh: Shell script to download data and calculate genome stats.
+**Files in This Repository**
 
-variation_genome_gc_analysis.R: R script for data analysis and visualization.
+variation_genome_gc_download.sh – Shell script for downloading genomes and computing statistics
 
-##🧠 Notes
+variation_genome_gc_analysis.R – R script for data loading, exploration, and visualization
 
-Genome sequences sourced directly from NCBI.
+**Important Notes**
 
-The pipeline can be adapted to include additional species or other genomic features.
+Genome sequences are sourced directly from NCBI.
 
-Shell script output serves as input for the R analysis.
+Workflow can be extended to additional species or other genomic features.
 
-Figures showing the results are not included in the repository. To generate the plots and statistical results,
-run the Shell script (variation_genome_gc_download.sh) in linux terminal and then the .tsv output
-file in the R script (variation_genome_gc_analysis.R).
+The shell script must be run first to generate mt_stats.tsv, which is then used as input for the R analysis.
+
+Resulting figures are not included in the repository; they are produced by running both scripts.
